@@ -6,32 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITR-4 Computation Generator</title>
     <style>
+        /* Reset some default styles and set font properties */
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Style for the container and sections */
+        #container {
+            width: 100%;
+            max-width: 210mm;
+            /* A4 paper width */
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 5px;
+            /* Reduced padding */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .section {
-            margin-bottom: 20px;
+            /* margin-bottom: 10px; */
+            /* Reduced margin */
+            padding: 2px;
+            /* Reduced padding */
+            border: 1px solid #ddd;
+            background-color: #fafafa;
+            border-radius: 4px;
+            text-align: left;
+            /* Left aligned */
         }
 
-        .data-table,
-        .nested-table {
+        h2 {
+            color: #0073e6;
+            font-size: 16px;
+            /* Reduced font size */
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 2px;
+            margin-bottom: 2px;
+            /* Reduced margin */
+            text-align: left;
+            /* Left aligned */
+        }
+
+        h3 {
+            font-size: 16px;
+            /* Reduced font size */
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 2px;
+            margin-bottom: 2px;
+            /* Reduced margin */
+            text-align: left;
+            /* Left aligned */
+        }
+
+        /* Table styles */
+        table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
+            margin-bottom: 2px;
+            /* Reduced margin */
+            text-align: left;
+            /* Left aligned */
         }
 
-        .data-table th,
-        .data-table td,
-        .nested-table th,
-        .nested-table td {
-            border: 1px solid #000;
-            padding: 8px;
+        th,
+        td {
+            font-size: small;
+            padding: 2px;
+            /* Reduced padding */
             text-align: left;
+            /* Left aligned */
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
         }
 
         .nested-table {
-            margin-top: 0;
+            margin: 2px 0;
+            /* Reduced margin */
+        }
+
+        .nested-table th,
+        .nested-table td {
+            padding: 2px;
+            /* Reduced padding */
+            border: 1px solid #ddd;
+        }
+
+        .upload-section {
+            text-align: left;
+            /* Left aligned */
+            margin-bottom: 2px;
+            /* Reduced margin */
+        }
+
+        #uploadButton,
+        #downloadButton {
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            padding: 2px 10px;
+            /* Reduced padding */
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 12px;
+            /* Reduced font size */
+        }
+
+        #uploadButton:hover,
+        #downloadButton:hover {
+            background-color: #005bb5;
         }
     </style>
 </head>
